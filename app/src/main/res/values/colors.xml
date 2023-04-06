@@ -12,4 +12,10 @@
     <color name="background_color">#FFecf4e7</color>
     <color name="traincolor">#00000000</color>
     <color name="save_back_color">#FF4bc89c</color>
+    <color name="button_pressed_color">#FF4bbc</color>
+    <color name="button_focused_color">#FFFbbccc</color>
+    <color name="button_default_color">#FFF1FFFF</color>
+    <color name="viper_bg_color">#FF000000</color>
+    <color name="viper_bg">#44999999</color>
+
 </resources>

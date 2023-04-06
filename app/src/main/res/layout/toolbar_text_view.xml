@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="200dp">
+    android:layout_width="fill_parent"
+    android:id="@+id/toolbar_text_root"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="220dp">
 
     <RelativeLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="20dp">
         <TextView
@@ -14,6 +18,7 @@
 
         </TextView>
         <ImageView
+            android:id="@+id/toolbar_text_back"
             android:layout_alignParentRight="true"
             android:layout_marginRight="20dp"
             android:src="@drawable/ic_dialog_close_light"
@@ -30,5 +35,187 @@
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"></RelativeLayout>
+        android:gravity="center_vertical"
+        android:layout_height="30dp">
+        <ImageView
+            android:background="@drawable/toolbar_text_select"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/ic_align_left"
+            android:src="@mipmap/ic_align_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+        <ImageView
+            android:background="@drawable/toolbar_text_select"
+            android:id="@+id/ic_align_center"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/ic_align_left"
+            android:src="@mipmap/ic_align_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+        <ImageView
+            android:background="@drawable/toolbar_text_select"
+            android:layout_toEndOf="@+id/ic_align_center"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ic_align_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:id="@+id/ic_line_space"
+            android:background="@drawable/toolbar_text_select"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ic_line_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+        <ImageView
+            android:background="@drawable/toolbar_text_select"
+            android:layout_toStartOf="@+id/ic_line_space"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ic_text_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@drawable/cir_bg_color"
+        android:id="@+id/textsize"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="120dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+            <include android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+
+            <include android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+            <include android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+            <include android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+            <include android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+
+            <include android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+            <include android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+            <include android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                layout="@layout/double_cir_pic">
+            </include>
+        </LinearLayout>
+    </LinearLayout>
+
 </LinearLayout>

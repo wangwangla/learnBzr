@@ -25,16 +25,16 @@
         </ImageView>
 
         <TextView
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="20dp"
+            android:id="@+id/save_note"
             android:layout_width="50dp"
             android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/save_background"
             android:gravity="center"
-            android:textColor="@color/white"
             android:text="@string/save"
-            android:background="@drawable/save_background">
-        </TextView>
+            android:textColor="@color/white"></TextView>
     </RelativeLayout>
 
     <RelativeLayout
@@ -206,6 +206,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
+            android:id="@+id/toolbar_text"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
@@ -215,6 +216,7 @@
         </ImageView>
 
         <ImageView
+            android:id="@+id/toolbar_bgColor"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
@@ -224,6 +226,7 @@
         </ImageView>
 
         <ImageView
+            android:id="@+id/toolbar_format"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
@@ -233,6 +236,7 @@
         </ImageView>
 
         <ImageView
+            android:id="@+id/toolbar_insert_pic"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"

@@ -1,40 +1,24 @@
 package kw.learn.androidbezier;
 
-import static android.media.session.PlaybackState.ACTION_STOP;
-
 import static androidx.media.session.MediaButtonReceiver.buildMediaButtonPendingIntent;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.NotificationCompat;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.media.audiofx.DynamicsProcessing;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.os.Handler;
 import android.view.View;
-import android.widget.RemoteViews;
 
 import kw.learn.androidbezier.fragment.CalendarFragment;
 import kw.learn.androidbezier.fragment.ChartFragment;
 import kw.learn.androidbezier.fragment.MineFragment;
 import kw.learn.androidbezier.fragment.TimeLineFragment;
-import kw.learn.androidbezier.utils.TimberUtils;
+import kw.learn.androidbezier.sqlite.NoteSeriUtils;
 
 public class LoadingActivity extends AppCompatActivity {
+    private Handler handler=  new Handler();
     private Runnable timeLineRunable = new Runnable() {
         @Override
         public void run() {
@@ -93,7 +77,6 @@ public class LoadingActivity extends AppCompatActivity {
 //            decorView.setSystemUiVisibility(systemUiVisibility & ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
         timeLineRunable.run();
-
 //        Intent intent = new Intent(this,MainActivity.class);
 //        startActivity(intent);
     }
