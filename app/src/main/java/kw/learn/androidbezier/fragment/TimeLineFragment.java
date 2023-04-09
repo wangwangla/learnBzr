@@ -9,25 +9,34 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.security.Key;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.SortedMap;
+import java.util.TreeMap;
 
 import kw.learn.androidbezier.R;
 import kw.learn.androidbezier.adapter.TimeLineRecyclerViewAdapter;
+import kw.learn.androidbezier.bean.DateBean;
+import kw.learn.androidbezier.bean.KeyBean;
+import kw.learn.androidbezier.bean.NoteBean;
 import kw.learn.androidbezier.data.TimeLineAllItem;
+import kw.learn.androidbezier.sqlite.NoteSeriUtils;
+import kw.learn.androidbezier.utils.NoteUtils;
 
 public class TimeLineFragment extends Fragment {
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
     private RecyclerView recyclerView;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -48,21 +57,66 @@ public class TimeLineFragment extends Fragment {
         @Override
         protected String doInBackground(String... strings) {
             if (getActivity()!=null) {
-
                 List<TimeLineAllItem> lineAllItems = new ArrayList<>();
-                for (int i = 0; i < 14; i++) {
-                    TimeLineAllItem item = new TimeLineAllItem();
-                    item.setTitle(true);
-                    item.setMsg("title");
-                    lineAllItems.add(item);
+                List<NoteBean> noteBeans = NoteSeriUtils.readNote();
+                Map<KeyBean,ArrayList<NoteBean>> hashMap = new TreeMap(new Comparator<KeyBean>() {
+                    @Override
+                    public int compare(KeyBean o2, KeyBean o1) {
+                        if (o1.getYear() > o2.getYear()) {
+                            return 1;
+                        }else if (o1.getYear() < o2.getYear()){
+                            return -1;
+                        }else {
+                            if (o1.getMonth() > o2.getMonth()) {
+                                return 1;
+                            }else if (o1.getMonth() < o2.getMonth()){
+                                return -1;
+                            }else {
+                                return 0;
+                            }
+                        }
+                    }
 
-                    TimeLineAllItem item1 = new TimeLineAllItem();
-                    item1.setTitle(false);
-                    item1.setMsg("title");
-                    lineAllItems.add(item1);
+                    @Override
+                    public boolean equals(Object obj) {
+                        return false;
+                    }
+                });
 
+                for (NoteBean noteBean : noteBeans) {
+                    long time = noteBean.getTime();
+                    DateBean dateBean = NoteUtils.longToDateBean(time);
+                    KeyBean bean = new KeyBean();
+                    bean.setYear(dateBean.getYear());
+                    bean.setMonth(dateBean.getMonth());
+                    ArrayList<NoteBean> noteBeansTemp = null;
+                    if(hashMap.containsKey(bean)){
+                        noteBeansTemp = hashMap.get(bean);
+                    }else {
+                        noteBeansTemp = new ArrayList<>();
+                    }
+                    noteBeansTemp.add(0,noteBean);
+                    hashMap.put(bean,noteBeansTemp);
                 }
-                timeLineRecyclerViewAdapter = new TimeLineRecyclerViewAdapter(lineAllItems);
+                for (KeyBean key : hashMap.keySet()) {
+                    ArrayList<NoteBean> noteBeans1 = hashMap.get(key);
+                    if (noteBeans1.size()>0) {
+                        NoteBean noteBean = noteBeans1.get(0);
+                        TimeLineAllItem item = new TimeLineAllItem();
+                        item.setTitle(true);
+                        item.setMsg(noteBean);
+                        lineAllItems.add(item);
+                    }else {
+                        continue;
+                    }
+                    for (NoteBean noteBean : noteBeans1) {
+                        TimeLineAllItem item = new TimeLineAllItem();
+                        item.setTitle(false);
+                        item.setMsg(noteBean);
+                        lineAllItems.add(item);
+                    }
+                }
+                timeLineRecyclerViewAdapter = new TimeLineRecyclerViewAdapter(lineAllItems,TimeLineFragment.this);
 
             }
             return "Executed";

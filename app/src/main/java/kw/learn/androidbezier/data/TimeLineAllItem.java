@@ -1,18 +1,22 @@
 package kw.learn.androidbezier.data;
 
+import java.io.Serializable;
+
+import kw.learn.androidbezier.bean.NoteBean;
+
 /**
  * @Auther jian xian si qi
  * @Date 2023/4/1 10:01
  */
-public class TimeLineAllItem {
+public class TimeLineAllItem implements Serializable {
     private boolean title;
-    private String msg;
+    private NoteBean msg;
 
-    public void setMsg(String msg) {
+    public void setMsg(NoteBean msg) {
         this.msg = msg;
     }
 
-    public String getMsg() {
+    public NoteBean getMsg() {
         return msg;
     }
 

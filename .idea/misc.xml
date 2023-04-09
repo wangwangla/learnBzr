@@ -7,15 +7,21 @@
         <entry key="..\:/AndroidBezier/app/src/main/res/drawable/cir_bg_color.xml" value="0.1865" />
         <entry key="..\:/AndroidBezier/app/src/main/res/drawable/cir_square.xml" value="0.2055" />
         <entry key="..\:/AndroidBezier/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1865" />
+        <entry key="..\:/AndroidBezier/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.184" />
         <entry key="..\:/AndroidBezier/app/src/main/res/drawable/ic_launcher_background.xml" value="0.209" />
+        <entry key="..\:/AndroidBezier/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.184" />
         <entry key="..\:/AndroidBezier/app/src/main/res/drawable/image_button.xml" value="0.1" />
         <entry key="..\:/AndroidBezier/app/src/main/res/drawable/line_very.xml" value="0.1" />
         <entry key="..\:/AndroidBezier/app/src/main/res/drawable/mydialog_shape.xml" value="0.197" />
+        <entry key="..\:/AndroidBezier/app/src/main/res/drawable/photo_select_oval_selector.xml" value="0.242" />
         <entry key="..\:/AndroidBezier/app/src/main/res/drawable/save_background.xml" value="0.2315" />
+        <entry key="..\:/AndroidBezier/app/src/main/res/drawable/shape_light_red_bg.xml" value="0.191" />
         <entry key="..\:/AndroidBezier/app/src/main/res/drawable/toolbar_dyncamic.xml" value="0.181" />
         <entry key="..\:/AndroidBezier/app/src/main/res/drawable/toolbar_text_select.xml" value="0.1565" />
+        <entry key="..\:/AndroidBezier/app/src/main/res/layout/activity_edit.xml" value="0.42451420029895365" />
         <entry key="..\:/AndroidBezier/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/AndroidBezier/app/src/main/res/layout/activity_main2.xml" value="0.25" />
+        <entry key="..\:/AndroidBezier/app/src/main/res/layout/dialog_item_delete.xml" value="0.22509057971014493" />
         <entry key="..\:/AndroidBezier/app/src/main/res/layout/dialog_loading.xml" value="0.28940217391304346" />
         <entry key="..\:/AndroidBezier/app/src/main/res/layout/double_cir_pic.xml" value="0.26403985507246375" />
         <entry key="..\:/AndroidBezier/app/src/main/res/layout/fragment_calendar.xml" value="0.3066123188405797" />
@@ -26,6 +32,12 @@
         <entry key="..\:/AndroidBezier/app/src/main/res/layout/fragment_time_line.xml" value="0.23697916666666666" />
         <entry key="..\:/AndroidBezier/app/src/main/res/layout/item_image.xml" value="0.26403985507246375" />
         <entry key="..\:/AndroidBezier/app/src/main/res/layout/mydialog.xml" value="0.28940217391304346" />
+        <entry key="..\:/AndroidBezier/app/src/main/res/layout/photo_folder_item.xml" value="0.2608695652173913" />
+        <entry key="..\:/AndroidBezier/app/src/main/res/layout/photo_folder_main.xml" value="0.2608695652173913" />
+        <entry key="..\:/AndroidBezier/app/src/main/res/layout/photo_grid_item.xml" value="0.2749094202898551" />
+        <entry key="..\:/AndroidBezier/app/src/main/res/layout/photo_gridview_main.xml" value="0.2749094202898551" />
+        <entry key="..\:/AndroidBezier/app/src/main/res/layout/preview_image_activity.xml" value="0.3328125" />
+        <entry key="..\:/AndroidBezier/app/src/main/res/layout/preview_image_item.xml" value="0.3328125" />
         <entry key="..\:/AndroidBezier/app/src/main/res/layout/time_line_title.xml" value="0.3026041666666667" />
         <entry key="..\:/AndroidBezier/app/src/main/res/layout/timeline_item_content.xml" value="0.2" />
         <entry key="..\:/AndroidBezier/app/src/main/res/layout/timeline_item_title.xml" value="0.284375" />

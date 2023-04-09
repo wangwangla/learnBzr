@@ -45,7 +45,7 @@ public class ToolBarTextDialog extends Dialog {
         setContentView(R.layout.toolbar_text_view);
         getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         //按空白处不能取消动画
-        setCanceledOnTouchOutside(false);
+//        setCanceledOnTouchOutside(false);
 
         // 获取屏幕宽度
         WindowManager wm = (WindowManager) MyApplication.getInstance().getSystemService(Context.WINDOW_SERVICE);

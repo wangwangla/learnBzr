@@ -55,7 +55,6 @@ public class SaveDialog extends Dialog {
      */
     public void setNoOnclickListener(String str, onNoOnclickListener onNoOnclickListener) {
         if (str != null) {
-
             noStr = str;
         }
         this.noOnclickListener = onNoOnclickListener;

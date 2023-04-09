@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="180dp">
     <LinearLayout
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:background="@drawable/cir_square"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,18 +24,21 @@
                 android:ellipsize="end"
                 android:maxLines="2"
                 android:text="xxxxxxxxxxx"
-                android:textColor="@color/purple_200"
-                android:textSize="30dp"></TextView>
+                android:textFontWeight="5"
+                android:textColor="@color/time_line_textcolor"
+                android:textSize="20dp"></TextView>
             <TextView
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textFontWeight="1"
                 android:layout_marginTop="55dp"
                 android:maxLines="3"
-                android:textSize="20dp"
+                android:textSize="15dp"
                 android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
                 android:ellipsize="end"
-                android:textColor="@color/purple_200"
+                android:textColor="@color/time_line_content_textcolor"
                 android:id="@+id/item_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">

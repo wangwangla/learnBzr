@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">AndroidBezier</string>
     <string name="app_name_plain">app_name_plain</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -9,7 +9,25 @@
     <string name="title_notifications">Notifications</string>
     <string name="save">save</string>
     <string name="weather_text">天气</string>
-    <string name="textNum_text">0字</string>
+    <string name="textNum_text">%1$d字</string>
     <string name="tag_text">标签</string>
     <string name="mood_text">心情</string>
+    <string name="photo_num">(%1$d)</string>
+
+
+    <!--    -->
+<string name="publish_select_photo_max" tools:ignore="ExtraTranslation">您最多只能选%1$d张图片</string>
+    <string name="common_large_image_title" tools:ignore="ExtraTranslation">%1$d/%2$d</string>
+    <string name="photo_select">photoSelect</string>
+    <string name="photo_preview">photoPreview</string>
+    <string name="photo_ok">photoOk</string>
+    <string name="photo_no_select">photoNoSelect</string>
+    <string name="photo_folder_select">photoFolderSelect</string>
+    <string name="select_ok">selectOk</string>
+    <string name="photo_to_choose">photoToChoose</string>
+    <string name="delte_info">确定要删除该篇日记吗？</string>
+    <string name="success_save">保存成功！</string>
+    <string name="faild_save">保存失败</string>
+    <string name="title_format">%1$d年%2$d月</string>
+
 </resources>
