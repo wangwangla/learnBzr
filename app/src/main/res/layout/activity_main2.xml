@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/add_note_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/add_note_back"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:tint="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ps_ic_back"
+            tools:ignore="UseAppTint">
+
+        </ImageView>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/save"
+            android:background="@drawable/save_background">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/add_note_top"
+        tools:layout_editor_absoluteX="20dp">
+
+        <TextView
+            android:id="@+id/add_note_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="1"
+            android:textSize="40dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/weekNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/add_note_day"
+            android:text="星期一">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@id/add_note_day"
+            android:text="2023.4">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="180dp"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <EditText
+            android:id="@+id/add_note_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:inputType="textMultiLine"
+            android:textSize="30dp"></EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2">
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/item_weather_icon"
+                android:src="@mipmap/ic_tag_weather"
+                android:layout_width="20dp"
+                android:layout_height="20dp">
+
+            </ImageView>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/item_weather_icon"
+                android:text="@string/weather_text"
+                android:layout_width="wrap_content"
+                android:textSize="20dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/item_mood_icon"
+                android:src="@mipmap/ic_tag_mood"
+                android:layout_width="20dp"
+                android:layout_height="20dp">
+
+            </ImageView>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/item_mood_icon"
+                android:text="@string/mood_text"
+                android:layout_width="wrap_content"
+                android:textSize="20dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/item_tag_icon"
+                android:src="@mipmap/ic_tag_tag"
+                android:layout_width="20dp"
+                android:layout_height="20dp">
+
+            </ImageView>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/item_tag_icon"
+                android:text="@string/tag_text"
+                android:layout_width="wrap_content"
+                android:textSize="20dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/item_textnum_icon"
+                android:src="@mipmap/ic_tag_text_number"
+                android:layout_width="20dp"
+                android:layout_height="20dp">
+
+            </ImageView>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/item_textnum_icon"
+                android:text="@string/textNum_text"
+                android:layout_width="wrap_content"
+                android:textSize="20dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fitsSystemWindows="true"
+        android:windowSoftInputMode="adjustResize"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/toolbar_text">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/toolbar_background">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/toolbar_format">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/toolbar_insert_pic">
+
+        </ImageView>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

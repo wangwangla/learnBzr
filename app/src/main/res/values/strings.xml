@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">AndroidBezier</string>
+    <string name="app_name_plain">app_name_plain</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="save">save</string>
+    <string name="weather_text">天气</string>
+    <string name="textNum_text">0字</string>
+    <string name="tag_text">标签</string>
+    <string name="mood_text">心情</string>
 </resources>
